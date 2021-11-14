@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!--1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.-->
+<!--2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр-->
+<!--3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори-->
+<!--4. Створити маис об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт-->
+<!--5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).-->
+<!--Значення площі зберігати в змінній s.-->
+<!--6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),-->
+<!--результат помістіть у змінну v.-->
+<!--7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).-->
+<!--Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).-->
+<script>
+    //1
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.round(Math.random(10, 25) * 10))
+    }
+    console.log(arr);
+
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    console.log(sum);
+
+    <!--2-->
+    let book1 = {
+        title: 'Mark Twein',
+        pages: 456,
+        genre: 'adventure'
+    };
+    console.log(book1);
+
+    <!--3-->
+    let book2 = {
+        title: 'Mark Twein',
+        pages: 456,
+        genre: 'adventure',
+        author: 'unknown'
+    };
+    console.log(book2);
+
+    <!--4-->
+
+    let bookStore = [];
+    bookStore.push(book1, book2)
+    console.log(bookStore[0]);
+    console.log(bookStore[1]);
+
+    <!--5-->
+
+    let height = 23;
+    let width = 10;
+    let s;
+
+    s = height * width;
+    console.log(s);
+
+    //6
+    let heightC = 10;
+    let dC = 4;
+    let v;
+
+    v = 3.14 * dC / 2 * Math.pow(heightC, 2);//height * height
+    console.log(v);
+
+
+    //7
+    let n = 3;
+    let m = 4;
+
+    let d;
+    d = (Math.sqrt(Math.pow(n, 2) + Math.pow(m, 2)));
+
+    console.log(d);
+
+</script>
+
+</body>
+</html>
