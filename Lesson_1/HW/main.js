@@ -197,7 +197,6 @@
 // console.log(typeof b);
 // console.log(typeof c);
 
-
 //_____________________________
 
 // 5 < 6 -> true
