@@ -1,0 +1,19 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.simson {
+    width: 1400px;
+    display: flex;
+}
+
+.food {
+    width: 1400px;
+    display: flex;
+
+}
+
+.product-card {
+    width: 200px;
+}
