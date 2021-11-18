@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.users-box {
+
+    display: grid;
+    background-color: aqua;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+ }
+
+.user-block {
+    background-color: aquamarine;
+}
+
+.wrap {
+    display: grid;
+    background-color: aqua;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
