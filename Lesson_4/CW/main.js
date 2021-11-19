@@ -104,14 +104,37 @@ console.log(x);
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
-function randomArr(arrOfNumbers) {
-    for (let i = 0; arrOfNumbers.length < 100; i++) {
-        let randomNumber = Math.floor(Math.random() * 100);
+let numberArr = [];
+function randomArr(min, max) {
+    for (let i = 0; i < max; i++) {
+        let randomNumber = Math.floor(Math.random() * (max - min) + min);
+        numberArr.push(randomNumber);
     }
+
+    console.log(numberArr);
 }
-randomArr();
+randomArr(0, 100);
 
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
 
+let numberArr2 = [];
+function randomArr2(min, limit) {
+    for (let i = 0; i < limit; i++) {
+        let randomNumber2 = Math.floor(Math.random() * (limit - min) + min);
+        numberArr2.push(randomNumber2);
+    }
 
+    console.log(numberArr2);
+}
+randomArr2(0, 100);
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+
+let someArr = [];
+function reverseArr (arr) {
+    console.log(arr);
+    for (let i = arr.length -1; i >= 0; i--) {
+        someArr.push(arr[i]);
+    }
+    console.log(someArr);
+}
+reverseArr([1, 2, 3]);

@@ -122,7 +122,6 @@
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
 
-
 let usersWithId = [
     {id: 1, name: 'vasya', age: 31, status: false},
     {id: 2, name: 'petya', age: 30, status: true},
@@ -135,6 +134,16 @@ let citiesWithId = [
     {user_id: 2, country: 'Poland', city: 'Krakow'},
     {user_id: 4, country: 'USA', city: 'Miami'}
 ];
+
+for (let citiesWithIdElement of citiesWithId) {
+    console.log(typeof citiesWithIdElement)
+    // for (const citiesWithIdElementElement of citiesWithIdElement) {
+    //     console.log(citiesWithIdElementElement);
+    // }
+}
+
+
+
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 // Записати цей об'єкт в новий масив
 // Example:
