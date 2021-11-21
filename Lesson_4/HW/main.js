@@ -42,38 +42,38 @@ creatParagraph('wasisdas');
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
 function createList1(text, q) {
-    document.write('<ul>')
+    document.write('<ul>');
     for (let i = 0; i < q; i++) {
         document.write(`<li>${text}</li>`)
     }
-    document.write('</ul>')
+    document.write('</ul>');
 }
 
-createList1('smth', 3)
+createList1('smth', 3);
 
 // - створити функцію яка створює ul з трьома елементами li.
 // Текст li задати через аргумент всім однаковий. Кількість
 // li визначається другим аргументом, який є числовим (тут використовувати цикл)
 function createList1(text, q) {
-    document.write('<ul>')
+    document.write('<ul>');
     for (let i = 0; i < q; i++) {
-        document.write(`<li>${text}</li>`)
+        document.write(`<li>${text}</li>`);
     }
-    document.write('</ul>')
+    document.write('</ul>');
 }
 
-createList1('smth', 10)
+createList1('smth', 10);
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
 
 function createList2(arr) {
-    document.write('<ul>')
+    document.write('<ul>');
     for (let i = 0; i < arr.length; i++) {
-        document.write(`<li>${arr[i]}</li>`)
+        document.write(`<li>${arr[i]}</li>`);
     }
-    document.write('</ul>')
+    document.write('</ul>');
 }
 
 createList2([1, 'Piter', 3.14, true, false]);
@@ -81,10 +81,10 @@ createList2([1, 'Piter', 3.14, true, false]);
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
 function createList3(arr) {
-    document.write('<div>')
+    document.write('<div>');
     for (let i = 0; i < arr.length; i++) {
         document.write(`<li>${arr[i].id} ${arr[i].name} ${arr[i].age}</li>`);
-        console.log(arr)
+        console.log(arr);
     }
     document.write('</div>');
 }
