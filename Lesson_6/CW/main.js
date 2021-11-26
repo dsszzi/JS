@@ -136,6 +136,7 @@ let arrHunter2 = (str, n) => {
     while (str.length) {
         res.push(str.substring(0, n));
         str = str.substring(n);
+        console.log(str);
     }
     return res;
 }

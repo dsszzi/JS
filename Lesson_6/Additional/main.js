@@ -1,3 +1,8 @@
+// var anyString = 'Mozilla';
+//
+// // Отобразит 'Moz';
+// console.log(anyString.substring(0, 3));
+// console.log(anyString.substring(3));
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
 
@@ -33,39 +38,32 @@
 
 let emailValidate = (email) => {
     let testEmail = email.toLowerCase();
-    let validateArr = [];
-    let symbol = testEmail.split('');
-    validateArr.push(symbol);
-    console.log(validateArr[0]);
-    for (let i = 0; i < validateArr[0].length; i++) {
-        const symbolElement = validateArr[0][i];
-        if (symbolElement === '@') {
-            return true;
-        } else if (symbolElement === '.') {
-            return true;
-        } else {
-            return false
-        }
+    //наявність равлика
+    if (!testEmail.indexOf('@')) return false;
+    //наявність крапки
+    if (!testEmail.indexOf('.')) return false;
+    //:данні до знака равлика(@)
+    if (testEmail.indexOf('@') < 1) return false;
+    // крапку яка знаходиться не меньше ніж на 2 символ далі після равлика
+    if (testEmail.indexOf(".") <= testEmail.toLowerCase().indexOf("@") + 2) return false;
+    //наявність символів у кінці, або крапка не повинна бути в кінці
+    if (testEmail.indexOf('.') === email.length - 1) return false;
+    //присутність спецсимволів
 
-
-
-
-
-
-            // if (symbolElement === '.') {
-            //     if (symbolElement.indexOf('@')) {
-            //         if (symbolElement.indexOf('@') !== 0) {
-            //             if (symbolElement.indexOf('.') + 2 > symbolElement.indexOf('@')) {
-            //                 console.log('Valid');
-            //             }
-            //         }
-            //     }
-            // }
-        }
-
-
+    let symbolTest = testEmail.split('');
+    for (let i = 0; i < symbolTest.length; i++) {
+        if (symbolTest[i] === '~' || symbolTest[i] === '!' || symbolTest[i] === '*' ||
+            symbolTest[i] === '+' || symbolTest[i] === '(' || symbolTest[i] === ')' ||
+            symbolTest[i] === '?') return false; // і так далі всі специмволи
+    }
+    return true;
 }
-emailValidate('xafcdsfcsd@gmail.com');
+console.log(emailValidate('someemail@gmail.com'));
+console.log(emailValidate('someeMAIL@gmail.com'));
+console.log(emailValidate('someeMAIL@i.ua'));
+console.log(emailValidate('some.email@gmail.com'));
+console.log(emailValidate('som~e.email@gmail.com'));
+
 
 // - є масивlet coursesArray = [
 //     {
@@ -139,11 +137,19 @@ emailValidate('xafcdsfcsd@gmail.com');
 //
 //
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
-//
+
+
+
+
+
+
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
-//
+
+
+
+
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
